@@ -7,8 +7,23 @@
 </ion-header>
 
 <ion-content padding>
-  <img [src]="user.avatar_url" *ngIf="user && user.avatar_url" alt="">
-  <h1>{{user.name}}</h1>
-  <h3>{{user.company}}</h3>
-  <button type="button" name="button" ion-button bloc (click)="goToRepos()">Ver Repos</button>
+  <ion-card>
+
+  <ion-card-header>
+    <ion-input type="text" name="" value="" [(ngModel)]="userId"> </ion-input>
+  </ion-card-header>
+
+  <ion-card-content>
+    
+    <img [src]="user.avatar_url" *ngIf="user && user.avatar_url" alt="" >
+    <h1>{{user.name}}</h1>
+    <h3>{{user.company}}</h3>
+    <h4>{{user.public_repos}}</h4>
+  </ion-card-content>
+
+</ion-card>
+
+
+
+  <button type="button" name="button" ion-button bloc (click)="getUsers()">Ver Usuario</button>
 </ion-content>
